@@ -1,10 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>记录自我 | 个人笔记</title>
-</head>
-<body>
+{% extends 'BasePage.html' %}
+{% load static %}
+{% block title %}
+    记录自我 | 个人笔记
+{% endblock %}
 
-</body>
-</html>
+{% block body %}
+    <body class="bg-dark d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg px-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4 fw-light text-white" href="#">PersonalNote</a>
+            <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold text-white" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm bg-dark">Register Account</button>
+        </div>
+    </nav>
+    <div class="d-flex flex-column flex-grow-1 align-items-center justify-content-center">
+        <div class="d-flex flex-column align-items-center justify-content-center w-100">
+            <h1 class="text-center text-wrap text-white display-1 fw-bolder w-50">
+                Ready to grab your notes
+            </h1>
+            <div class="d-flex justify-content-end w-50">
+                <img src="{% static 'img/Stroke.svg' %}" alt="">
+            </div>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center w-100 mt-2">
+            <h1 class="text-center text-wrap text-white fs-6 fw-light w-50">
+                PersonalNote offers you functions such as note storage, editing, retrieval and sharing. We have
+                classified and managed all your notes based on their content.
+            </h1>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center w-100 mt-5">
+            <button type="button"
+                    class="btn btn-primary w-25 rounded-pill btn d-flex align-items-center justify-content-center">
+                <img src="{% static 'img/🦆 emoji _sparkles_.svg' %}" alt="">
+                <span class="ms-3">Start taking notes</span>
+            </button>
+        </div>
+    </div>
+    </body>
+{% endblock %}

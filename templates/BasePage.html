@@ -1,0 +1,15 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Title{% endblock %}</title>
+    {% block another_js %}{% endblock %}
+    {% block another_css %}{% endblock %}
+    <script type="text/javascript" src="{% static 'js/bootstrap.bundle.js' %}" defer></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+</head>
+{% block body %}
+	
+{% endblock %}
+</html>
