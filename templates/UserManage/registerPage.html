@@ -1,0 +1,35 @@
+{% extends 'BasePage.html' %}
+{% load static %}
+
+{% block title %}
+    个人笔记 | 注册
+{% endblock %}
+
+{% block body %}
+    <body class="d-flex min-vh-100">
+    <div class="d-flex flex-grow-1 flex-column align-items-center border border-light">
+        <div class="d-flex flex-column align-items-center">
+            <h4 class="mb-4 h5 display-2 mt-3 mb-3">Sign Up</h4>
+            <form class="border rounded p-5">
+                <div class="form-group mb-2">
+                    <input type="text" class="form-control" id="NameInput"
+                           placeholder="UserName" required="">
+                </div>
+                <div class="form-group mb-2">
+                    <input type="email" class="form-control" id="EmailInput"
+                           placeholder="E-mail" required="">
+                </div>
+                <div class="form-group mb-2">
+                    <input type="password" class="form-control" id="PasswordInput" placeholder="Password"
+                           required="">
+                </div>
+                <div class="form-group mb-2">
+                    <input type="password" class="form-control" id="PasswordInputOnceMore"
+                           placeholder="Password Once More" required="">
+                </div>
+                <button type="submit" class="btn btn-success btn-round btn-block shadow-sm">Sign in</button>
+            </form>
+        </div>
+    </div>
+    </body>
+{% endblock %}

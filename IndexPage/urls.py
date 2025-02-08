@@ -17,6 +17,8 @@ Including another URLconf
 from django.urls import path
 from IndexPage import views
 
+app_name = 'AppIndexPage'
+
 urlpatterns = [
     path('', views.IndexPageView.as_view(), name='index')
 ]
