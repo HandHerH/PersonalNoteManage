@@ -80,7 +80,18 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': {**{'ENGINE': 'django.db.backends.mysql'}, **mysql_settngs}
+    'default': {**{'ENGINE': 'django.db.backends.mysql'}, **mysql_settngs},
+}
+
+# Caches
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/0",  # 根据你的 Redis 配置调整地址、端口和 DB 编号
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
 }
 
 # Password validation

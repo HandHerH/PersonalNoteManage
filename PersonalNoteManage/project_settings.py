@@ -12,9 +12,14 @@ SMTP_PORT = 465  # 465 端口使用 SSL
 EMAIL_USER = "lichenfeng_03@163.com"
 EMAIL_PASS = "TFpiq39iiLyM3xkg"  # 使用授权码，不是邮箱登录密码
 
+verify_code_length = 6
+# 验证码过期时间
+expire_time = 60 * 5
+
 email_settings = {
     'SMTP_SERVER': SMTP_SERVER,
     'SMTP_PORT': SMTP_PORT,
     'EMAIL_USER': EMAIL_USER,
     'EMAIL_PASS': EMAIL_PASS
 }
+
