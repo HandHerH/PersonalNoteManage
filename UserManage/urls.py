@@ -21,5 +21,6 @@ app_name = 'AppUserManage'
 
 urlpatterns = [
     path(r'main/', views.MainPageView.as_view(), name='main'),
-    path(r'register/', views.RegisterView.as_view(), name='register')
+    path(r'register/', views.RegisterView.as_view(), name='register'),
+    path('a/send_verify_code/', views.EmailView.as_view(), name='send_verify_code'),
 ]

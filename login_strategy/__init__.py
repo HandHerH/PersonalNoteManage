@@ -1,5 +1,5 @@
-from strategies import LoginStrategy
-from email_strategy import EmailStrategy
+from login_strategy.strategies import LoginStrategy
+from login_strategy.email_strategy import EmailStrategy
 
 lst = LoginStrategy()
 
